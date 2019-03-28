@@ -1,8 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Otoroshi commercial support</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="https://github.com/MAIF/otoroshi/raw/master/resources/otoroshi-logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Roboto" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -142,7 +151,7 @@
     <nav class="site-header sticky-top py-1">
       <div class="container d-flex flex-column flex-md-row justify-content-between" style="max-width: 950px;">
         <a class="py-2" href="#">
-          <img class="brand-logo" src="https://www.otoroshi.io/assets/images/svg/otoroshi_logo.svg" />
+          <img class="brand-logo" src="https://github.com/MAIF/otoroshi/raw/master/resources/otoroshi-logo.png" />
           Otoroshi Proxy
         </a>
         <div style="width: 200px;"></div>
@@ -175,8 +184,8 @@
             </div>
           </li>
         </ul>
-        <a class="py-2 d-none d-md-inline-block high-link" href="mailto:contact@otoroshi.io">
-          <div class="contact-us">
+        <a class="py-2 d-none d-md-inline-block high-link" data-toggle="modal" data-target="#contactModal">
+          <div class="contact-us" style="width: 110px; text-align: center; margin-top: 5px">
             Contact us
           </div>
         </a>
@@ -209,13 +218,13 @@
               <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 0.8em;">€999 EUR per instance, per year.</p>
               <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 0.8em;">2-hour SLA. Business Day*</p>
             </div>
-            <a class="btn btn-outline-secondary" href="https://www.otoroshi.io" target="_blank">Subscribe Now</a>
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">Subscribe Now</button>
             <p class="lead font-weight-normal" style="margin-top: 10px; font-size: 0.6em;">* Monday-Friday: 9am-6pm CET</p>
           </div>
           <div style="width: 50%; padding-left: 80px; padding-right: 80px;">
               <div style="font-size: 1.6em; font-weight: 100; margin-bottom: 10px;">PLATINUM SUPPORT</div>
               <p class="lead font-weight-normal" style="font-size: 1.0em; line-height: 35px; height: 100px;">More than 5 instances? Need support customized for your business? Contact our sales team to find the best solution.</p>
-              <a class="btn btn-outline-secondary" href="mailto:contact@otoroshi.io">  Contact Us  </a>
+              <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">Contact Us</button>
             </div>
         </div>
       </div>
@@ -230,14 +239,14 @@
           <p style="font-size: 1.0em; line-height: 35px; height: 170px;">
             Our experts will work with you to optimise your Otoroshi architecture, design, and configuration according to your requirements.
           </p>
-          <a class="discover btn btn-outline-secondary" href="#" target="_blank">Request an expert</a>
+          <button type="button"  class="discover btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">Request an expert</button>
         </div>
         <div style="width: 50%; padding-left: 60px; padding-right: 60px;">
           <h3 class="display-4 font-weight-normal" style="font-size: 1.6rem;">TRAINING</h3>
           <p style="font-size: 1.0em; line-height: 35px; height: 170px;">
             Interested in developing your teams' Otoroshi skills? We will teach them everything they need to setup, configure and deploy Otoroshi effectively.
           </p>
-          <a class="btn btn-outline-secondary discover" href="#" target="_blank">Become an expert</a>
+          <button type="button"  class="btn btn-outline-secondary discover" data-toggle="modal" data-target="#contactModal">Become an expert</button>
         </div>
       </div>
     </div>
@@ -278,11 +287,71 @@
         <div class="col-6 col-md">
           <h5>Support</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://otoroshi-proxy.github.io/support.html ">Commercial Support</a></li>
+            <li><a class="text-muted" href="https://awesome-mestorf-d0971f.netlify.com/support.html ">Commercial Support</a></li>
             <li><a class="text-muted" href="https://www.otoroshi.io/manual/">Documentation</a></li>
           </ul>
         </div>
       </div>
-    </footer>    
+    </footer> 
+    <div class="modal" tabindex="-1" role="dialog" id="contactModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <form name="contact-us" data-netlify="true" netlify-recaptcha="true" method="POST" action="/support.html">
+              <input type="hidden" name="form-name" value="contact-us">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="contactUsModalLabel">Contact Us!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-row">
+                      <p>Please provide your contact information. We will message you back as soon as possible.
+                      </p>
+                  </div>
+                  <div class="form-row">
+                      <h2>Contact Information</h2>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="inputCUFirstName">First Name</label>
+                          <input required="required" name="first_name" type="text" class="form-control" id="inputCUFirstName" placeholder="First Name">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="inputCULastName">Last Name</label>
+                          <input required="required" name="last_name" type="text" class="form-control" id="inputCULastName" placeholder="Last Name">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-12">
+                          <label for="inputCUCompanyName">Company Name</label>
+                          <input required="required" name="company_name" type="text" class="form-control" id="inputCUCompanyName" placeholder="Company Inc">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-12">
+                          <label for="inputCUEMail">E-mail</label>
+                          <input required="required" name="e_mail" type="email" class="form-control" id="inputCUEMail" placeholder="">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-12">
+                          <label for="inputCUMessage">Message</label>
+                          <textarea required="required" name="more" class="form-control" id="inputCUMessage"></textarea>
+                      </div>
+                  </div>
+                  <input id="contact_us_source" type="hidden" name="source" value="service-consulting">
+                  <!--<div class="form-row justify-content-center">
+                      <div class="g-recaptcha" data-sitekey="6LdFEWYUAAAAAFeAGBs9q9qRuH110dXTwZoNoxwG"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LdFEWYUAAAAAFeAGBs9q9qRuH110dXTwZoNoxwG&amp;co=aHR0cHM6Ly9jb250YWluby51czo0NDM.&amp;hl=fr&amp;v=v1552285980763&amp;size=normal&amp;cb=uyurajd6rcra" width="304" height="78" role="presentation" name="a-aj5asu7uqu5z" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                  </div>-->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
+        </div>   
+      </div>   
+    </div>
   </body>
 </html>
