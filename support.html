@@ -184,8 +184,8 @@
             </div>
           </li>
         </ul>
-        <a class="py-2 d-none d-md-inline-block high-link" data-toggle="modal" data-target="#contactModal">
-          <div class="contact-us" style="width: 110px; text-align: center; margin-top: 5px">
+        <a class="py-2 d-none d-md-inline-block high-link" data-toggle="modal" data-source="contact-us" data-target="#contactModal">
+          <div class="contact-us" style="width: 110px; text-align: center; margin-top: 5px; color: #999; cursor: pointer;">
             Contact us
           </div>
         </a>
@@ -218,13 +218,13 @@
               <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 0.8em;">€999 EUR per instance, per year.</p>
               <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 0.8em;">2-hour SLA. Business Day*</p>
             </div>
-            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">Subscribe Now</button>
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-source="standard-support-subscription" data-target="#contactModal">Subscribe Now</button>
             <p class="lead font-weight-normal" style="margin-top: 10px; font-size: 0.6em;">* Monday-Friday: 9am-6pm CET</p>
           </div>
           <div style="width: 50%; padding-left: 80px; padding-right: 80px;">
               <div style="font-size: 1.6em; font-weight: 100; margin-bottom: 10px;">PLATINUM SUPPORT</div>
               <p class="lead font-weight-normal" style="font-size: 1.0em; line-height: 35px; height: 100px;">More than 5 instances? Need support customized for your business? Contact our sales team to find the best solution.</p>
-              <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+              <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-source="platinum-support-subscription" data-target="#contactModal">Contact Us</button>
             </div>
         </div>
       </div>
@@ -239,14 +239,14 @@
           <p style="font-size: 1.0em; line-height: 35px; height: 170px;">
             Our experts will work with you to optimise your Otoroshi architecture, design, and configuration according to your requirements.
           </p>
-          <button type="button"  class="discover btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">Request an expert</button>
+          <button type="button"  class="discover btn btn-outline-secondary" data-toggle="modal" data-source="request-expert" data-target="#contactModal">Request an expert</button>
         </div>
         <div style="width: 50%; padding-left: 60px; padding-right: 60px;">
           <h3 class="display-4 font-weight-normal" style="font-size: 1.6rem;">TRAINING</h3>
           <p style="font-size: 1.0em; line-height: 35px; height: 170px;">
             Interested in developing your teams' Otoroshi skills? We will teach them everything they need to setup, configure and deploy Otoroshi effectively.
           </p>
-          <button type="button"  class="btn btn-outline-secondary discover" data-toggle="modal" data-target="#contactModal">Become an expert</button>
+          <button type="button"  class="btn btn-outline-secondary discover" data-toggle="modal" data-source="become-expert" data-target="#contactModal">Become an expert</button>
         </div>
       </div>
     </div>
@@ -296,7 +296,7 @@
     <div class="modal" tabindex="-1" role="dialog" id="contactModal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <form name="contact-us" data-netlify="true" netlify-recaptcha="true" method="POST" action="/support.html">
+            <form name="contact-us" data-netlify="true" data-netlify-recaptcha="true" data-netlify-honeypot="bot-field" method="POST" action="/support.html">
               <input type="hidden" name="form-name" value="contact-us">
               <div class="modal-header">
                   <h5 class="modal-title" id="contactUsModalLabel">Contact Us!</h5>
@@ -312,6 +312,9 @@
                   <div class="form-row">
                       <h2>Contact Information</h2>
                   </div>
+                  <p class="hide">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
                   <div class="form-row">
                       <div class="form-group col-md-6">
                           <label for="inputCUFirstName">First Name</label>
@@ -340,10 +343,8 @@
                           <textarea required="required" name="more" class="form-control" id="inputCUMessage"></textarea>
                       </div>
                   </div>
-                  <input id="contact_us_source" type="hidden" name="source" value="service-consulting">
-                  <!--<div class="form-row justify-content-center">
-                      <div class="g-recaptcha" data-sitekey="6LdFEWYUAAAAAFeAGBs9q9qRuH110dXTwZoNoxwG"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LdFEWYUAAAAAFeAGBs9q9qRuH110dXTwZoNoxwG&amp;co=aHR0cHM6Ly9jb250YWluby51czo0NDM.&amp;hl=fr&amp;v=v1552285980763&amp;size=normal&amp;cb=uyurajd6rcra" width="304" height="78" role="presentation" name="a-aj5asu7uqu5z" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
-                  </div>-->
+                  <input id="contact_us_source" type="hidden" name="source" value="--">
+                  <div data-netlify-recaptcha="true"></div>
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -353,5 +354,11 @@
         </div>   
       </div>   
     </div>
+    <script>
+      $('button[data-source]').on('click', function(e) {
+        var value = $(this).data('source');
+        $('#contact_us_source').val(value);
+      });
+    </script>
   </body>
 </html>
