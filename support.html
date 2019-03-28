@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <title>Otoroshi commercial support</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    
+      .container {
+        max-width: 960px;
+      }
+
+      /*
+      * Custom translucent site header
+      */
+
+      .site-header {
+        background-color: rgba(0, 0, 0, .78);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+      }
+      .site-header a {
+        color: #999;
+        transition: ease-in-out color .15s;
+      }
+      .site-header a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /*
+      * Dummy devices (replace them with your own or something else entirely!)
+      */
+
+      .product-device {
+        position: absolute;
+        right: 10%;
+        bottom: -30%;
+        width: 300px;
+        height: 540px;
+        background-color: #333;
+        border-radius: 21px;
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+      }
+
+      .product-device::before {
+        position: absolute;
+        top: 10%;
+        right: 10px;
+        bottom: 10%;
+        left: 10px;
+        content: "";
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 5px;
+      }
+
+      .product-device-2 {
+        top: -25%;
+        right: auto;
+        bottom: 0;
+        left: 5%;
+        background-color: #e5e5e5;
+      }
+
+
+      /*
+      * Extra utilities
+      */
+
+      .flex-equal > * {
+        -ms-flex: 1;
+        flex: 1;
+      }
+      @media (min-width: 768px) {
+        .flex-md-equal > * {
+          -ms-flex: 1;
+          flex: 1;
+        }
+      }
+
+      .overflow-hidden { overflow: hidden; }
+
+      body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      .brand-logo {
+        width: 45px;
+        height: 45px;
+      }
+      .high-link {
+        line-height: 45px;
+      }
+      .contact-us {
+        border: 1px solid #eee;
+        padding: 5;
+        border-radius: 4px;
+        line-height: 33px;
+      }
+      .hide {
+        display: none !important;
+      }
+      .bg-dark {
+        background-color: #484848!important;
+        color: white;
+      }
+      .discover {
+        color: #bec2c6 !important;
+        border-color: #bec2c6 !important;
+      }
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        color: #fff !important;
+        background-color: rgba(0, 0, 0, 0.897) !important;
+      }
+      .site-header a:hover {
+        color: #999 !important;
+        text-decoration: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between" style="max-width: 950px;">
+        <a class="py-2" href="#">
+          <img class="brand-logo" src="https://www.otoroshi.io/assets/images/svg/otoroshi_logo.svg" />
+          Otoroshi Proxy
+        </a>
+        <div style="width: 200px;"></div>
+        <ul class="nav nav-pills">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle high-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://www.otoroshi.io">Otoroshi</a>
+              <a class="dropdown-item" href="https://www.otoroshi.io/daikoku">Daikoku</a>
+              <a class="dropdown-item" href="https://github.com/mathieuancelin/clever-ripper">Clever reaper</a>
+              <a class="dropdown-item" href="https://github.com/Serli/otoroshi-prometheus-connector">Prometheus Connector</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle high-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://www.otoroshi.io">Otoroshi website</a>
+              <a class="dropdown-item" href="https://www.otoroshi.io/manual/">Documentation</a>
+              <a class="dropdown-item" href="https://github.com/MAIF/otoroshi">Github</a>
+              <a class="dropdown-item" href="https://gitter.im/MAIF/otoroshi">Gitter</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle high-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Company</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Team</a>
+              <a class="dropdown-item" href="#">Locations</a>
+              <a class="dropdown-item" href="#">Privacy</a>
+              <a class="dropdown-item" href="#">Terms</a>
+            </div>
+          </li>
+        </ul>
+        <a class="py-2 d-none d-md-inline-block high-link" href="mailto:contact@otoroshi.io">
+          <div class="contact-us">
+            Contact us
+          </div>
+        </a>
+      </div>
+    </nav>
+    
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="display: flex; justify-content: center; align-items: center;">
+      <div style="width: 100%; max-width: 950px; display: flex; justify-content: space-between">
+        <div style="width: 35%; text-align: left; padding-left: 60px; padding-top: 40px">
+          <h1 class="display-4 font-weight-normal" style="font-size: 2rem;">Otoroshi</h1>
+          <p class="lead font-weight-normal" style="font-size: 0.9em;">We offer Consulting, Training & Support.</p>
+          <a class="btn btn-outline-secondary discover" href="https://www.otoroshi.io" target="_blank">Discover Otoroshi</a>
+        </div>
+        <div class="d-none d-md-block" style="display: flex; justify-content: center; width: 60%;">
+          <img src="https://www.otoroshi.io/assets/images/svg/otoroshi_logo.svg" width="360" />
+        </div>
+      </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="display: flex;">
+      <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+        <div style="height: 80px;">
+          <h2 style="font-size: 1.6rem; font-weight: 200;">Commercial Support</h2>
+        </div>
+        <div style="display: flex; width: 100%; max-width: 950px;">
+          <div style="width: 50%; padding-left: 60px; padding-right: 60px;">
+            <div style="font-size: 1.6em; font-weight: 100; margin-bottom: 10px;">STANDARD SUPPORT</div>
+            <div style="height: 100px; margin-bottom: 16px;">
+              <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 1.1em;">We offer Consulting, Training & Support.</p>
+              <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 1.0em;">Up to 5 instances (Leader or Worker)</p>
+              <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 0.8em;">€999 EUR per instance, per year.</p>
+              <p class="lead font-weight-normal" style="margin-bottom: 5px;font-size: 0.8em;">2-hour SLA. Business Day*</p>
+            </div>
+            <a class="btn btn-outline-secondary" href="https://www.otoroshi.io" target="_blank">Subscribe Now</a>
+            <p class="lead font-weight-normal" style="margin-top: 10px; font-size: 0.6em;">* Monday-Friday: 9am-6pm CET</p>
+          </div>
+          <div style="width: 50%; padding-left: 80px; padding-right: 80px;">
+              <div style="font-size: 1.6em; font-weight: 100; margin-bottom: 10px;">PLATINUM SUPPORT</div>
+              <p class="lead font-weight-normal" style="font-size: 1.0em; line-height: 35px; height: 100px;">More than 5 instances? Need support customized for your business? Contact our sales team to find the best solution.</p>
+              <a class="btn btn-outline-secondary" href="mailto:contact@otoroshi.io">  Contact Us  </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="display: flex; flex-direction: column; justify-content: space-around; align-items: center;">
+      <div style="height: 50px;">
+        <h2 style="font-size: 1.6rem; font-weight: 200">At Your Service</h2>
+      </div>
+      <div style="width: 80%; display: flex; justify-content: space-between; max-width: 950px;">
+        <div style="width: 50%; padding-left: 60px; padding-right: 60px;">
+          <h3 class="display-4 font-weight-normal" style="font-size: 1.6rem;">CONSULTING</h3>
+          <p style="font-size: 1.0em; line-height: 35px; height: 170px;">
+            Our experts will work with you to optimise your Otoroshi architecture, design, and configuration according to your requirements.
+          </p>
+          <a class="discover btn btn-outline-secondary" href="#" target="_blank">Request an expert</a>
+        </div>
+        <div style="width: 50%; padding-left: 60px; padding-right: 60px;">
+          <h3 class="display-4 font-weight-normal" style="font-size: 1.6rem;">TRAINING</h3>
+          <p style="font-size: 1.0em; line-height: 35px; height: 170px;">
+            Interested in developing your teams' Otoroshi skills? We will teach them everything they need to setup, configure and deploy Otoroshi effectively.
+          </p>
+          <a class="btn btn-outline-secondary discover" href="#" target="_blank">Become an expert</a>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container py-5">
+      <div class="row" style="max-width: 950px;">
+        <div class="col-12 col-md">
+          <img class="brand-logo" src="https://www.otoroshi.io/assets/images/svg/otoroshi_logo.svg" />
+          <small class="d-block mb-3 text-muted">© 2018-2019</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Products</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.otoroshi.io">Otoroshi</a></li>
+            <li><a class="text-muted" href="https://www.otoroshi.io/daikoku">Daikoku</a></li>
+            <li><a class="text-muted" href="https://github.com/mathieuancelin/clever-ripper">Clever reaper</a></li>
+            <li><a class="text-muted" href="https://github.com/Serli/otoroshi-prometheus-connector">Prometheus Connector</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.otoroshi.io">Otoroshi website</a></li>
+            <li><a class="text-muted" href="https://www.otoroshi.io/manual/">Documentation</a></li>
+            <li><a class="text-muted" href="https://github.com/MAIF/otoroshi">Github</a></li>
+            <li><a class="text-muted" href="https://gitter.im/MAIF/otoroshi">Gitter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Company</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Support</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://otoroshi-proxy.github.io/support.html ">Commercial Support</a></li>
+            <li><a class="text-muted" href="https://www.otoroshi.io/manual/">Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>    
+  </body>
+</html>
